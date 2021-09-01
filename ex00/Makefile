@@ -1,6 +1,5 @@
 NAME = megaphone
 
-CFLAGS = -Wall -Wextra -Werror
 CPP_FILE =	megaphone.cpp
 O_FILE = $(CPP_FILE:.cpp=.o)
 
@@ -11,7 +10,7 @@ $(NAME): $(O_FILE)
 	c++ $(O_FILE) -o $(NAME)
 
 %.o: %.cpp
-	c++ -c -Wall -Wextra -Werror $< -o $@
+	@c++ -c -Wall -Wextra -Werror $< -o $@
 
 clean:
 	@rm -f $(O_FILE)

@@ -38,26 +38,11 @@ std::string		ContactInformation::getNickName(void){
 	return (nickName);
 }
 
-// void	ContactInformation::OutputPrecisionContactField(std::string contactField, unsigned short int widthField){
-// 	if (init == false)
-// 		return ;
-// 	bool dot = false;
-// 	int widthWriteWord = contactField.size();
-// 	int widthSpasec = widthField - contactField.size();
-// 	if (widthSpasec < 0){
-// 		widthSpasec = 0;
-// 		widthWriteWord = widthField - 1;
-// 		dot = true;
-// 	}
-// 	for (int i = 0; i < widthSpasec; ++i)
-// 		std::cout<<" ";
-// 	for (int i = 0; i < widthWriteWord; ++i)
-// 		std::cout<<contactField[i];
-// 	if (dot == true)
-// 		std::cout<<".";
-// }
+bool	ContactInformation::isInit(void){
+	return (init);
+}
 
-void	ContactInformation::OutputInformation(unsigned int id){
+void	ContactInformation::OutputInformation(void){
 	if (init == false)
 		return ;
 	std::cout<<"First name: "<<firstName<<std::endl;

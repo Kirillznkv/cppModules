@@ -14,12 +14,12 @@ private:
 public:
 	ContactInformation(void);
 	~ContactInformation(void);
-	// void OutputPrecisionContactField(std::string contactField, unsigned short int precision);
-	void InitContactInformaion(void);
-	void OutputInformation(unsigned int idForOutPut);
 	std::string getFirstName(void);
 	std::string getLastName(void);
 	std::string getNickName(void);
+	void InitContactInformaion(void);
+	void OutputInformation(void);
+	bool isInit(void);
 };
 
 #endif
