@@ -2,11 +2,11 @@
 
 ContactInformation::ContactInformation(void){
 	init = false;
-	firstName = nullptr;
-	lastName = nullptr;
-	nickName = nullptr;
-	phoneNumber = nullptr;
-	darkSecret = nullptr;
+	firstName = "";
+	lastName = "";
+	nickName = "";
+	phoneNumber = "";
+	darkSecret = "";
 }
 
 ContactInformation::~ContactInformation(void){

@@ -10,6 +10,7 @@ private:
 	unsigned short int nextAddInx;
 	ContactInformation contacts[8];
 
+	int MyStrToInt(std::string str);
 	void OutputPrecisionContactField(std::string contactField, unsigned short int precision);
 public:
 	PhoneBook(void);

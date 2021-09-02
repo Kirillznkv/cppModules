@@ -38,6 +38,15 @@ void PhoneBook::OutputPrecisionContactField(std::string contactField, unsigned s
 		std::cout<<".";
 }
 
+int PhoneBook::MyStrToInt(std::string str) {
+    int n = str.length();
+    for (int i = 0; i < n; ++i){
+        if (str[i] < '0' || str[i] > '9')
+            return (-1);
+    }
+    return (std::stoi(str));
+}
+
 void PhoneBook::SearchContact(void){
 	if (contacts[0].isInit() == false)
 		return ;
@@ -52,12 +61,14 @@ void PhoneBook::SearchContact(void){
 		OutputPrecisionContactField(contacts[i].getNickName(), 10);
 		std::cout<<"|"<<std::endl;
 	}
-	int number = 0;
+	std::string strNumber;
 	std::cout<<"Choose numder: ";
-	std::cin>>number;
+	std::cin>>strNumber;
+	int number = MyStrToInt(strNumber);
 	while (number < 0 || number > 7 || contacts[number].isInit() == false){
 		std::cout<<"Choose correct numder: ";
-		std::cin>>number;
+		std::cin>>strNumber;
+        number = MyStrToInt(strNumber);
 	}
 	std::cout<<"Contact information:"<<std::endl;
 	contacts[number].OutputInformation();
