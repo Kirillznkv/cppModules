@@ -23,8 +23,8 @@ void PhoneBook::AddContact(void){
 
 void PhoneBook::OutputPrecisionContactField(std::string contactField, unsigned short int widthField){
 	bool dot = false;
-	int widthWriteWord = contactField.size();
-	int widthSpasec = widthField - contactField.size();
+	int widthWriteWord = contactField.length();
+	int widthSpasec = widthField - contactField.length();
 	if (widthSpasec < 0){
 		widthSpasec = 0;
 		widthWriteWord = widthField - 1;
@@ -39,12 +39,12 @@ void PhoneBook::OutputPrecisionContactField(std::string contactField, unsigned s
 }
 
 int PhoneBook::MyStrToInt(std::string str) {
-    int n = str.length();
-    for (int i = 0; i < n; ++i){
-        if (str[i] < '0' || str[i] > '9')
-            return (-1);
-    }
-    return (std::stoi(str));
+	int n = str.length();
+	for (int i = 0; i < n; ++i){
+		if (str[i] < '0' || str[i] > '9')
+			return (-1);
+	}
+	return (std::stoi(str));
 }
 
 void PhoneBook::SearchContact(void){
