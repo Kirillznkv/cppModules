@@ -18,7 +18,7 @@ public:
 	std::string getLastName(void);
 	std::string getNickName(void);
 	void InitContactInformaion(void);
-	void OutputInformation(void);
+	void OutputInformation(void) const;
 	bool isInit(void);
 };
 

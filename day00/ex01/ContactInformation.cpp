@@ -42,7 +42,7 @@ bool	ContactInformation::isInit(void){
 	return (init);
 }
 
-void	ContactInformation::OutputInformation(void){
+void	ContactInformation::OutputInformation(void) const{
 	if (init == false)
 		return ;
 	std::cout<<"First name: "<<firstName<<std::endl;
