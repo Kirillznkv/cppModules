@@ -1,5 +1,5 @@
-#ifndef DAY01_ZOMBIE_H
-#define DAY01_ZOMBIE_H
+#ifndef ZOMNIE_HPP
+#define ZOMNIE_HPP
 
 #include <iostream>
 
