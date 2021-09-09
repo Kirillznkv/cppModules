@@ -1,6 +1,6 @@
 NAME = trap
 
-CPP_FILE =	main.cpp ClapTrap.cpp ScavTrap.cpp
+CPP_FILE =	main.cpp ClapTrap.cpp FragTrap.cpp
 O_FILE = $(CPP_FILE:.cpp=.o)
 
 all: $(NAME)
