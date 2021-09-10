@@ -15,7 +15,7 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), Scav
 	this->_name = name;
 	ClapTrap::_name = name + "_clap_name";
 	this->_hitpoints = FragTrap::_hitpoints;
-	this->_energyPoints = ScavTrap::_energyPoints;
+	this->_energyPoints = 50;//ScavTrap::_energyPoints;
 	this->_attackDamage = FragTrap::_attackDamage;
 }
 DiamondTrap::DiamondTrap(const DiamondTrap & copyTrap){
