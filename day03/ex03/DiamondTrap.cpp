@@ -27,6 +27,7 @@ DiamondTrap::DiamondTrap(const DiamondTrap & copyTrap){
 DiamondTrap &DiamondTrap::operator=(const DiamondTrap & operatorTrap){
 	std::cout<<"#Operator ="<<std::endl;
 	this->_name = operatorTrap._name;
+	ClapTrap::_name = this->_name + "_clap_name";
 	this->_attackDamage = operatorTrap._attackDamage;
 	this->_energyPoints = operatorTrap._energyPoints;
 	this->_hitpoints = operatorTrap._hitpoints;
