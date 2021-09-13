@@ -11,9 +11,9 @@ public:
 	Dog(Dog & copyDog);
 	Dog &operator=(Dog & operatorDog);
 	~Dog(void);
-	void makeSound(void);
+	void makeSound(void) const;
 };
 
-std::ostream &operator<<(std::ostream &out, Dog &dog);
+std::ostream &operator<<(std::ostream &out, const Dog &dog);
 
 #endif

@@ -16,12 +16,17 @@ Animal &Animal::operator=(Animal & operatorAnimal){
 	_type = operatorAnimal._type;
 	return (*this);
 }
-std::ostream &operator<<(std::ostream &out, Animal &animal){
+std::ostream &operator<<(std::ostream &out, const Animal &animal){
 	out<<animal.getType();
 	return (out);
 }
 
-/*--Functions---*/
-std::string Animal::getType(void){
+/*---Getters---*/
+std::string Animal::getType(void) const{
 	return (_type);
+}
+
+/*--Functions---*/
+void Animal::makeSound(void) const{
+	std::cout<<"hello, i'm Animal(noType)"<<std::endl;
 }

@@ -4,7 +4,7 @@
 Cat::~Cat(void){std::cout<<"#Destructor Cat"<<std::endl;}
 Cat::Cat(void) : Animal(){
 	std::cout<<"#Constructor Cat"<<std::endl;
-	_type = "Cat";
+	this->_type = "Cat";
 }
 Cat::Cat(Cat & copyCat){
 	std::cout<<"#Copy constructor Cat"<<std::endl;
@@ -13,15 +13,15 @@ Cat::Cat(Cat & copyCat){
 
 /*---Overload-operators---*/
 Cat &Cat::operator=(Cat & operatorCat){
-	_type = operatorCat._type;
+	this->_type = operatorCat._type;
 	return (*this);
 }
-std::ostream &operator<<(std::ostream &out, Cat &cat){
+std::ostream &operator<<(std::ostream &out, const Cat &cat){
 	out<<cat.getType();
 	return (out);
 }
 
 /*---Functions---*/
-void Cat::makeSound(void){
+void Cat::makeSound(void) const{
 	std::cout<<"hello, i'm Cat"<<std::endl;
 }

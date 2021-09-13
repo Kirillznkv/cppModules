@@ -11,7 +11,10 @@ public:
 	Animal(Animal & copyAnimal);
 	~Animal(void);
 	Animal &operator=(Animal & operatorAnimal);
-	std::string getType(void);
+	/*---Getters---*/
+	std::string getType(void) const;
+	/*---Functions---*/
+	virtual void makeSound(void) const;
 };
 
 std::ostream &operator<< (std::ostream &cout, const Animal &animal);

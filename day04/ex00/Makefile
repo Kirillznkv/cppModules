@@ -1,6 +1,6 @@
 NAME = polymorphism
 
-CPP_FILE =	main.cpp 
+CPP_FILE =	main.cpp Animal.cpp Cat.cpp Dog.cpp
 O_FILE = $(CPP_FILE:.cpp=.o)
 
 all: $(NAME)

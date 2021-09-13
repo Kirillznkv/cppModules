@@ -11,9 +11,9 @@ public:
 	Cat(Cat & copyDog);
 	Cat &operator=(Cat & operatorCat);
 	~Cat(void);
-	void makeSound(void);
+	void makeSound(void) const;
 };
 
-std::ostream &operator<<(std::ostream &out, Dog &cat);
+std::ostream &operator<<(std::ostream &out, const Cat &cat);
 
 #endif
