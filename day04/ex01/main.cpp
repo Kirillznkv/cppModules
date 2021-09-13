@@ -3,12 +3,12 @@
 
 int main(void){
 	
-	// const Animal* j = new Dog();
-	// const Animal* i = new Cat();
-	// std::cout << j->getType() << " " << std::endl;
-	// std::cout << i->getType() << " " << std::endl;
-	// delete i;
-	// delete j;
+	const Animal* j = new Dog();
+	const Animal* i = new Cat();
+	std::cout << j->getType() << " " << std::endl;
+	std::cout << i->getType() << " " << std::endl;
+	delete i;
+	delete j;
 
 	// Cat cat1, cat2;
 	// std::cout<<cat1<<std::endl;
@@ -31,17 +31,6 @@ int main(void){
 	// Cat cat1, cat2(cat1);
 	// std::cout<<cat1<<std::endl;
 	// std::cout<<cat2<<std::endl;
-
-	// const Animal* j = new Dog[10];
-	// const Animal* i = new Cat[10];
-
-	// for (int inx = 0; inx < 10; ++inx){
-	// 	;
-	// 	// std::cout<<i[inx].getType()<<std::endl
-	// 	// 		<<j[inx].getType()<<std::endl;
-	// }
-	// delete[] i;
-	// delete[] j;
 
 	return (0);
 }
