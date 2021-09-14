@@ -14,7 +14,7 @@ public:
 	/*---Getters---*/
 	std::string getType(void) const;
 	/*---Functions---*/
-	virtual void makeSound(void) const;
+	void makeSound(void) const;
 };
 
 std::ostream &operator<< (std::ostream &cout, const WrongAnimal &WrongAnimal);

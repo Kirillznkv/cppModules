@@ -23,6 +23,5 @@ int main(void){
 	jW->makeSound();
 	metaW->makeSound();
 
-	delete &meta;
 	return (0);
 }
