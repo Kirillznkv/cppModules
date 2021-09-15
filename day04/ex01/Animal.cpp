@@ -4,7 +4,7 @@
 Animal::~Animal(void){std::cout<<"#Destructor Animal"<<std::endl;}
 Animal::Animal(void){
 	std::cout<<"#Constructor Animal"<<std::endl;
-	_type = "noType";
+	this->_type = "noType";
 }
 Animal::Animal(Animal & copyAnimal){
 	std::cout<<"#Copy constructor Animal"<<std::endl;
@@ -23,7 +23,7 @@ std::ostream &operator<<(std::ostream &out, const Animal &animal){
 
 /*---Getters---*/
 std::string Animal::getType(void) const{
-	return (_type);
+	return (this->_type);
 }
 
 /*--Functions---*/

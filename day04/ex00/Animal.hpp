@@ -9,7 +9,7 @@ protected:
 public:
 	Animal(void);
 	Animal(Animal & copyAnimal);
-	~Animal(void);
+	virtual ~Animal(void);
 	Animal &operator=(Animal & operatorAnimal);
 	/*---Getters---*/
 	std::string getType(void) const;

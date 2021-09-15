@@ -9,7 +9,7 @@ protected:
 public:
 	WrongAnimal(void);
 	WrongAnimal(WrongAnimal & copyWrongAnimal);
-	~WrongAnimal(void);
+	virtual ~WrongAnimal(void);
 	WrongAnimal &operator=(WrongAnimal & operatorWrongAnimal);
 	/*---Getters---*/
 	std::string getType(void) const;

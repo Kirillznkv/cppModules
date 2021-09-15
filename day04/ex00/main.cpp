@@ -23,5 +23,12 @@ int main(void){
 	jW->makeSound();
 	metaW->makeSound();
 
+	delete i;
+	delete iW;
+	delete j;
+	delete jW;
+	delete meta;
+	delete metaW;
+
 	return (0);
 }
