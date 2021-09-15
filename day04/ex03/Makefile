@@ -1,6 +1,6 @@
 NAME = play
 
-CPP_FILE =	main.cpp AMateria.cpp Ice.cpp Cure.cpp
+CPP_FILE =	main.cpp AMateria.cpp Ice.cpp Cure.cpp MateriaSource.cpp
 O_FILE = $(CPP_FILE:.cpp=.o)
 
 all: $(NAME)
