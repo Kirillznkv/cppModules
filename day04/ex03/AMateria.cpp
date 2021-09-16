@@ -20,5 +20,5 @@ AMateria *AMateria::clone(void) const{
 	return (new AMateria(*this));
 }
 void AMateria::use(ICharacter & target){
-	std::cout<<"* NO-NO-NO, i cant *"<<std::endl;
+	std::cout<<"* NO-NO-NO, "<<target.getName()<<", i cant *"<<std::endl;
 }

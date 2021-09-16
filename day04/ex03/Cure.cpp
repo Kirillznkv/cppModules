@@ -1,7 +1,7 @@
 #include "Cure.hpp"
 
 /*---Constructors-and-Destructor---*/
-Cure::Cure(void){this->_type = "cure";}
+Cure::Cure(void): AMateria(){this->_type = "cure";}
 Cure::Cure(const Cure & copy){this->operator=(copy);}
 Cure::~Cure(void){}
 
@@ -16,5 +16,5 @@ AMateria *Cure::clone(void) const{
 	return (new Cure(*this));
 }
 void Cure::use(ICharacter & target){
-	std::cout<<"* heals NAME’s wounds *"<<std::endl;
+	std::cout<<"* heals "<<target.getName()<<" wounds *"<<std::endl;
 }

@@ -3,10 +3,9 @@
 
 #include "IMateriaSource.hpp"
 
-class MateriaSource : IMateriaSource{
+class MateriaSource : public IMateriaSource{
 private:
-	AMateria _materias[4];
-	unsigned short int _numderMaterias;
+	AMateria *_materias[4];
 public:
 	/*---Constructors-and-Destructor---*/
 	MateriaSource(void);
