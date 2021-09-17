@@ -38,14 +38,24 @@ unsigned short int Bureaucrat::getGrade(void) const{
 
 /*---Functions---*/
 void Bureaucrat::incrementGrade(void){
-	if (_grade - 1 < 1)
-		throw GradeTooHighException();
-	--_grade;
+	try{
+		if (_grade - 1 < 1)
+			throw GradeTooHighException();
+		--_grade;
+	}
+	catch(const std::exception& e){
+		std::cerr << "Error: " << e.what() << '\n';
+	}
 }
 void Bureaucrat::decrementGrade(void){
-	if (_grade + 1 > 150)
-		throw GradeTooLowException();
-	++_grade;
+	try{
+		if (_grade + 1 > 150)
+			throw GradeTooLowException();
+		++_grade;
+	}
+	catch(const std::exception& e){
+		std::cerr << "Error: " << e.what() << '\n';
+	}
 }
 
 /*---exceptions-classes---*/

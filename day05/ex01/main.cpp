@@ -6,17 +6,10 @@ int main(void){
 		Bureaucrat kirill("kirill", 3);
 
 		std::cout<<kirill<<std::endl;
-		try {kirill.incrementGrade();}
-		catch (std::exception& e){std::cerr << "Error: " << e.what() << '\n';}
-
-		try {kirill.incrementGrade();}
-		catch (std::exception& e){std::cerr << "Error: " << e.what() << '\n';}
-
-		try {kirill.incrementGrade();}
-		catch (std::exception& e){std::cerr << "Error: " << e.what() << '\n';}//error
-
-		try {kirill.incrementGrade();}
-		catch (std::exception& e){std::cerr << "Error: " << e.what() << '\n';}//error
+		kirill.incrementGrade();
+		kirill.incrementGrade();
+		kirill.incrementGrade();//error
+		kirill.incrementGrade();//error
 		std::cout<<kirill<<std::endl;
 	}
 	{
@@ -24,11 +17,8 @@ int main(void){
 		Bureaucrat kirill("kirill", 149);
 
 		std::cout<<kirill<<std::endl;
-		try {kirill.decrementGrade();}
-		catch (std::exception& e){std::cerr << "Error: " << e.what() << '\n';}
-
-		try {kirill.decrementGrade();}
-		catch (std::exception& e){std::cerr << "Error: " << e.what() << '\n';}//error
+		kirill.decrementGrade();
+		kirill.decrementGrade();//error
 		std::cout<<kirill<<std::endl;
 	}
 	{
