@@ -24,7 +24,7 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &op){
 	return (*this);
 }
 std::ostream &operator<<(std::ostream &out, const Bureaucrat &op){
-	out<<op.getName()<<" №"<<op.getGrade();
+	out<<op.getName()<<" ("<<op.getGrade()<<")";
 	return (out);
 }
 
@@ -38,23 +38,22 @@ unsigned short int Bureaucrat::getGrade(void) const{
 
 /*---Functions---*/
 void Bureaucrat::incrementGrade(void){
-	try{
-		if (_grade - 1 < 1)
-			throw GradeTooHighException();
-		--_grade;
-	}
-	catch(const std::exception& e){
-		std::cerr << "Error: " << e.what() << '\n';
-	}
+	if (_grade - 1 < 1)
+		throw GradeTooHighException();
+	--_grade;
 }
 void Bureaucrat::decrementGrade(void){
+	if (_grade + 1 > 150)
+		throw GradeTooLowException();
+	++_grade;
+}
+void Bureaucrat::signForm(Form &form){
 	try{
-		if (_grade + 1 > 150)
-			throw GradeTooLowException();
-		++_grade;
+		form.beSigned(*this);
+		std::cout<<_name<<" sign doc "<<form.getName()<<std::endl;
 	}
-	catch(const std::exception& e){
-		std::cerr << "Error: " << e.what() << '\n';
+	catch(std::exception &e){
+		std::cerr<<_name<<" cant sign doc "<<form.getName()<<std::endl;
 	}
 }
 

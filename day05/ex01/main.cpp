@@ -2,35 +2,30 @@
 
 int main(void){
 	{
-		std::cout<<"========================================"<<std::endl;
-		Bureaucrat kirill("kirill", 3);
-
-		std::cout<<kirill<<std::endl;
+		std::cout<<"================================================="<<std::endl;
+		Bureaucrat kirill("Kirill", 22);
+		Form school21("School21", 21, 1);
+		kirill.signForm(school21);
+		std::cout<<"sign: "<<(school21.getDone()?"true":"false")<<std::endl;
 		kirill.incrementGrade();
-		kirill.incrementGrade();
-		kirill.incrementGrade();//error
-		kirill.incrementGrade();//error
-		std::cout<<kirill<<std::endl;
+		kirill.signForm(school21);
+		std::cout<<"sign: "<<(school21.getDone()?"true":"false")<<std::endl;
 	}
 	{
-		std::cout<<"========================================"<<std::endl;
-		Bureaucrat kirill("kirill", 149);
-
-		std::cout<<kirill<<std::endl;
-		kirill.decrementGrade();
-		kirill.decrementGrade();//error
-		std::cout<<kirill<<std::endl;
-	}
-	{
-		std::cout<<"========================================"<<std::endl;
+		std::cout<<"================================================="<<std::endl;
+		Bureaucrat kirill("Kirill", 22);
 		try{
-			Bureaucrat kirill("kirill", -1);
+			Form school21("School21", -1, 1);
 		}
-		catch(std::exception& e){std::cerr << "Error: " << e.what() << '\n';}
+		catch(std::exception &e){
+			std::cerr<<e.what()<<std::endl;
+		}
 		try{
-			Bureaucrat kirill("kirill", 151);
+			Form school21("School21", 151, 1);
 		}
-		catch(std::exception& e){std::cerr << "Error: " << e.what() << '\n';}
+		catch(std::exception &e){
+			std::cerr<<e.what()<<std::endl;
+		}
 	}
 	return (0);
 }

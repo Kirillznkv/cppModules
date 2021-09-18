@@ -24,7 +24,7 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &op){
 	return (*this);
 }
 std::ostream &operator<<(std::ostream &out, const Bureaucrat &op){
-	out<<op.getName()<<" №"<<op.getGrade();
+	out<<op.getName()<<" ("<<op.getGrade()<<")";
 	return (out);
 }
 
