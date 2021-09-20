@@ -9,12 +9,16 @@ int	error(std::string strError){
 }
 
 bool isError(std::string &argv, double &res){
-	if (argv.size() < 1 || argv[0] < '0' || argv[0] > '9')
+	if (argv.size() < 1)
 		return (true);
+	if(argv.size() == 1 && (argv[0] < '0' || argv[0] > '9')){
+		res = (int)argv[0];
+		return (false);
+	}
 	if (argv[argv.size() - 1] == 'f')
 		argv.erase(argv.size() - 1, 1);
 	bool dot = false;
-	for (int i = 0; i < (int)argv.size(); ++i){
+	for (int i = argv[0] == '-' ? 1 : 0; i < (int)argv.size(); ++i){
 		if (argv[i] >= '0' && argv[i] <= '9')
 			continue ;
 		if (argv[i] == '.' && (i + 1) < (int)argv.size() && !dot)
@@ -27,9 +31,13 @@ bool isError(std::string &argv, double &res){
 }
 
 bool isExceptionInput(std::string &argv){
-	if (argv == "nan" || argv == "nanf" ||
-		argv == "+inf" || argv == "+inff" ||
-		argv == "-inf" || argv == "-inff")
+	if (argv == "nanf" ||
+		argv == "+inff" ||
+		argv == "-inff")
+		printExcep(argv.erase(argv.size() - 1, 1));
+	else if (argv == "nan" || 
+			argv == "+inf" ||
+			argv == "-inf")
 		printExcep(argv);
 	else
 		return (false);
