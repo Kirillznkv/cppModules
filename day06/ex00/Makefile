@@ -1,6 +1,6 @@
 NAME = play
 
-CPP_FILE =	main.cpp
+CPP_FILE =	main.cpp utils.cpp
 O_FILE = $(CPP_FILE:.cpp=.o)
 
 all: $(NAME)
