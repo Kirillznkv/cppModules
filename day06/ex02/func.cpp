@@ -17,9 +17,23 @@ Base *generate(void){
 }
 
 void identify(Base* p){
-	p->~Base();
+	try{
+		if (p == nullptr)
+			throw "Error: nullptr";
+		p->~Base();
+	}
+	catch(char const * str){
+		std::cerr<<str<<std::endl;
+	}
 }
 
 void identify(Base& p){
-	p.~Base();
+	try{
+		if (&p == nullptr)
+			throw "Error: nullptr";
+		p.~Base();
+	}
+	catch(char const * str){
+		std::cerr<<str<<std::endl;
+	}
 }
