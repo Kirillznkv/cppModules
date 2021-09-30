@@ -20,7 +20,12 @@ void identify(Base* p){
 	try{
 		if (p == nullptr)
 			throw "Error: nullptr";
-		p->~Base();
+		if (dynamic_cast<A*>(p))
+			std::cout<<"type: A"<<std::endl;
+		if (dynamic_cast<B*>(p))
+			std::cout<<"type: B"<<std::endl;
+		if (dynamic_cast<C*>(p))
+			std::cout<<"type: C"<<std::endl;
 	}
 	catch(char const * str){
 		std::cerr<<str<<std::endl;
@@ -31,7 +36,12 @@ void identify(Base& p){
 	try{
 		if (&p == nullptr)
 			throw "Error: nullptr";
-		p.~Base();
+		if (dynamic_cast<A*>(&p))
+			std::cout<<"type: A"<<std::endl;
+		if (dynamic_cast<B*>(&p))
+			std::cout<<"type: B"<<std::endl;
+		if (dynamic_cast<C*>(&p))
+			std::cout<<"type: C"<<std::endl;
 	}
 	catch(char const * str){
 		std::cerr<<str<<std::endl;

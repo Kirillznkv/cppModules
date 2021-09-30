@@ -13,5 +13,15 @@ int main(void){
 	tmp = generate();
 	identify(tmp);
 	identify(*tmp);
+
+	std::cout<<"=================="<<std::endl;
+	A a;
+	identify(a);
+	identify(&a);
+
+	std::cout<<"=================="<<std::endl;
+	Base *tmpNull = nullptr;
+	identify(tmpNull);
+	identify(*tmpNull);
 	return (0);
 }
