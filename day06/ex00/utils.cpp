@@ -1,12 +1,12 @@
 #include <iostream>
 #include <iomanip>
 
-static void printChar(int ch){
+static void printChar(unsigned char ch){
 	std::cout<<"char: ";
 	if (ch < 33 || ch > 126)
-		std::cout<<" Non displayable"<<std::endl;
+		std::cout<<"Non displayable"<<std::endl;
 	else
-		std::cout<<"char: '"<<(char)ch<<"'"<<std::endl;
+		std::cout<<"'"<<ch<<"'"<<std::endl;
 }
 static void printInt(int num){
 	std::cout<<"int: "<<num<<std::endl;
@@ -25,9 +25,9 @@ static void printDouble(double num){
 }
 
 void printAll(double num){
-	printChar((int)num);
-	printInt((int)num);
-	printFloat((float)num);
+	printChar(static_cast<unsigned char>(num));
+	printInt(static_cast<int>(num));
+	printFloat(static_cast<float>(num));
 	printDouble(num);
 }
 

@@ -12,7 +12,7 @@ bool isError(std::string &argv, double &res){
 	if (argv.size() < 1)
 		return (true);
 	if(argv.size() == 1 && (argv[0] < '0' || argv[0] > '9')){
-		res = (int)argv[0];
+		res = static_cast<double>(argv[0]);
 		return (false);
 	}
 	if (argv[argv.size() - 1] == 'f')
