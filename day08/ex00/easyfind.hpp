@@ -8,8 +8,7 @@ class NotFound : public std::exception{
 };
 
 template <typename T>
-typename T::iterator easyfind(T &intContainer, int x)
-{
+typename T::iterator easyfind(T &intContainer, int x){
 	typename T::iterator elem;
 	elem = std::find(intContainer.begin(), intContainer.end(), x);
 	if (elem == intContainer.end())
