@@ -1,6 +1,6 @@
 NAME = play
 
-CPP_FILE =	main.cpp mutantstack.cpp
+CPP_FILE =	main.cpp
 O_FILE = $(CPP_FILE:.cpp=.o)
 
 all: $(NAME)
